@@ -1,0 +1,85 @@
+site_name: Mkdocs Template Site
+site_description: 'DESCRIPTION All content licensed Creative Commons ShareAlike Attribution Noncommercial'
+site_author: 'Dan McCreary'
+repo_name: 'GitHub Repo'
+site_url: 'https://dmccreary.github.io/lambda-graph-visualization/'
+repo_url: 'https://github.com/dmccreary/lambda-graph-visualization'
+edit_uri: 'blob/master/docs'
+
+nav:
+  - Home: index.md
+  - course-description.md
+  - Chapters:
+    - chapters/index.md
+    - chapters/chapter-01/index.md
+  - MicroSims:
+    - sims/index.md
+    - sims/lambda-graph-2-p5/index.md
+    - sims/lambda-graph-2-vis/index.md
+  - Stories:
+    - stories/index.md
+    - stories/alanzo-church/index.md
+  - Glossary: glossary.md
+  - How We Built This Site: how-we-built-this-site.md
+  - References: references.md
+  - Feedback: feedback.md
+  - License: license.md
+  - Contact: contact.md
+ 
+# CoderDojo Microsite Standards from here down
+
+theme:
+  name: material
+  extra_css:
+    - styles/custom.css
+  logo: img/logo.png
+  # favicon: img/my-icon.png
+  palette:
+    primary: 'blue'
+    accent: 'orange'
+  include_sidebar: true
+  features:
+    - content.code.copy
+    - navigation.expand
+    - navigation.path
+    - navigation.prune
+    - navigation.indexes
+    - toc.follow
+    - navigation.top
+    # this adds the prev and next icons in the footer
+    - navigation.footer
+    - content.action.edit
+plugins:
+  - search
+  - social
+markdown_extensions:
+  - meta
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.snippets
+  - pymdownx.emoji
+  - pymdownx.tilde
+  - pymdownx.tasklist
+  - pymdownx.tabbed
+  - pymdownx.highlight:
+      linenums: true
+  # enable LaTeX equation rendering
+  - pymdownx.arithmatex:
+      generic: true
+extra_css:
+   - css/extra.css
+extra_javascript:
+    - js/extra.js
+    - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+#extra:
+#  analytics:
+#    provider: google
+    # https://analytics.google.com/analytics/web/#/a1420179p349994530/admin/streams/table/4433129821
+#    property: G-XXXX
