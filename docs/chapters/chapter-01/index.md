@@ -1,7 +1,5 @@
 # Chapter 1: Introduction to Lambda Graphs
 
-# Module 1: Introduction to Lambda Calculus
-
 ## Learning Objectives
 
 By the end of this chapter, you will be able to:

@@ -40,18 +40,22 @@ theme:
   include_sidebar: true
   features:
     - content.code.copy
+    - content.action.edit
     - navigation.expand
     - navigation.path
     - navigation.prune
     - navigation.indexes
-    - toc.follow
-    - navigation.top
-    # this adds the prev and next icons in the footer
+       # this adds the prev and next icons in the footer
     - navigation.footer
-    - content.action.edit
+    - navigation.sections - toc.follow
+    - navigation.top
+    - search.highlight
+    - search.share
+    - header.autohide
 plugins:
   - search
   - social
+  # - social_override
 markdown_extensions:
   - meta
   - admonition
