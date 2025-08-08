@@ -1,0 +1,1245 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="DESCRIPTION All content licensed Creative Commons ShareAlike Attribution Noncommercial">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/lambda-graph-visualization/stories/alanzo-church/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../glossary/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Alonzo Church and the Legacy of Lambda Calculus - Lambda Graph Visualization</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Alonzo Church and the Legacy of Lambda Calculus - Lambda Graph Visualization" >
+      
+        <meta  property="og:description"  content="DESCRIPTION All content licensed Creative Commons ShareAlike Attribution Noncommercial" >
+      
+        <meta  property="og:image"  content="https://dmccreary.github.io/lambda-graph-visualization/assets/images/social/stories/alanzo-church/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://dmccreary.github.io/lambda-graph-visualization/stories/alanzo-church/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Alonzo Church and the Legacy of Lambda Calculus - Lambda Graph Visualization" >
+      
+        <meta  name="twitter:description"  content="DESCRIPTION All content licensed Creative Commons ShareAlike Attribution Noncommercial" >
+      
+        <meta  name="twitter:image"  content="https://dmccreary.github.io/lambda-graph-visualization/assets/images/social/stories/alanzo-church/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#alonzo-church-and-the-legacy-of-lambda-calculus" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Lambda Graph Visualization" class="md-header__button md-logo" aria-label="Lambda Graph Visualization" data-md-component="logo">
+      
+  <img src="../../img/logo-192.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Lambda Graph Visualization
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Alonzo Church and the Legacy of Lambda Calculus
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/lambda-graph-visualization" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Lambda Graph Visualization" class="md-nav__button md-logo" aria-label="Lambda Graph Visualization" data-md-component="logo">
+      
+  <img src="../../img/logo-192.png" alt="logo">
+
+    </a>
+    Lambda Graph Visualization
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/lambda-graph-visualization" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../chapters/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Stories
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Stories
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Alonzo Church and the Legacy of Lambda Calculus
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Alonzo Church and the Legacy of Lambda Calculus
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#panel-1-the-mathematical-crisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 1: The Mathematical Crisis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-2-the-foundation-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 2: The Foundation Problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-3-the-birth-of-an-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 3: The Birth of an Idea
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-4-the-presentation-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 4: The Presentation Challenge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-5-the-simplification-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 5: The Simplification Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-6-the-turing-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 6: The Turing Connection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-7-the-breakthrough-moment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 7: The Breakthrough Moment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-8-early-adoption-struggles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 8: Early Adoption Struggles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-9-the-programming-language-revolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 9: The Programming Language Revolution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-10-modern-programming-renaissance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 10: Modern Programming Renaissance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-11-lambdas-hidden-influence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 11: Lambda's Hidden Influence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-12-the-eternal-lambda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 12: The Eternal Lambda
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#narrative-arc-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Narrative Arc Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-we-built-this-site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How We Built This Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../references/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#panel-1-the-mathematical-crisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 1: The Mathematical Crisis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-2-the-foundation-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 2: The Foundation Problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-3-the-birth-of-an-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 3: The Birth of an Idea
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-4-the-presentation-challenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 4: The Presentation Challenge
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-5-the-simplification-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 5: The Simplification Strategy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-6-the-turing-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 6: The Turing Connection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-7-the-breakthrough-moment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 7: The Breakthrough Moment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-8-early-adoption-struggles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 8: Early Adoption Struggles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-9-the-programming-language-revolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 9: The Programming Language Revolution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-10-modern-programming-renaissance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 10: Modern Programming Renaissance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-11-lambdas-hidden-influence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 11: Lambda's Hidden Influence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-12-the-eternal-lambda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Panel 12: The Eternal Lambda
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#narrative-arc-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Narrative Arc Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/lambda-graph-visualization/blob/master/docs/stories/alanzo-church/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="alonzo-church-and-the-legacy-of-lambda-calculus">Alonzo Church and the Legacy of Lambda Calculus</h1>
+<p><img alt="" src="cover.png" /></p>
+<p>In the early 20th century, mathematics faced a profound crisis. The very foundations upon which centuries of mathematical knowledge had been built were crumbling under the weight of newly discovered paradoxes and contradictions. It was during this turbulent time that a young mathematician at Princeton University would develop an idea so revolutionary that it would eventually become the hidden language powering our modern digital world.</p>
+<h2 id="panel-1-the-mathematical-crisis">Panel 1: The Mathematical Crisis</h2>
+<p><img alt="" src="panel-01.png" /></p>
+<details>
+   <summary>Panel 1: Princeton, 1930 - A Young Logician's Vision</summary>
+
+Wide landscape panel showing a young Alonzo Church in his Princeton University office, surrounded by chalkboards covered in mathematical symbols and logical formulas. The room is filled with warm golden light streaming through tall windows. Church, a thin man with glasses, stands contemplatively before a blackboard with Russell's Paradox written on it. Books by Russell, Whitehead, and Hilbert are scattered on his desk. The color palette features bright blues and golds, representing the dawn of a new mathematical era. In the background, we can see other mathematicians working, suggesting the collaborative atmosphere of Princeton's mathematics department during the foundational crisis period.
+
+</details>
+
+<p>Alonzo Church arrived at Princeton during one of the most intellectually stimulating yet challenging periods in mathematical history. The discovery of Russell's Paradox and other fundamental contradictions had shaken the mathematical community to its core. Traditional set theory, which had seemed so solid and reliable, now appeared riddled with logical holes. Church, like many of his contemporaries, was deeply troubled by these foundational problems. But unlike others who saw only crisis, Church began to envision a completely new approach to understanding computation and mathematical truth.</p>
+<h2 id="panel-2-the-foundation-problem">Panel 2: The Foundation Problem</h2>
+<p><img alt="" src="panel-02.png" /></p>
+<details>
+   <summary>Panel 2: The Search for Mathematical Truth</summary>
+
+Please generate a consistent graphic novel panel using a wide-landscape format.  The panel showing Church in animated discussion with colleagues around a conference table. Mathematical paradoxes float like thought bubbles above their heads - Russell's Paradox, the Liar Paradox, and Cantor's diagonal argument visualized as geometric shapes. The scene uses vibrant purples and oranges to show the intensity of mathematical debate. Church gestures toward a diagram showing the hierarchy of mathematical systems, with question marks indicating the gaps in understanding. Other mathematicians look puzzled or concerned, representing the mathematical community's struggle with foundational issues. The background shows equations dissolving or transforming, symbolizing the instability of mathematical foundations.
+
+</details>
+
+<p>The mathematical community was engaged in heated debates about the nature of mathematical truth itself. David Hilbert's formalist program promised to put mathematics on solid ground through rigorous axiomatization, while others pursued different approaches to resolve the paradoxes. Church participated actively in these discussions, but he was developing his own unique perspective. Rather than trying to patch the existing foundations, he began to think about computation and functions in a radically different way. What if, instead of sets and formal systems, we could build mathematics from the ground up using the simple concept of function abstraction?</p>
+<h2 id="panel-3-the-birth-of-an-idea">Panel 3: The Birth of an Idea</h2>
+<p><img alt="" src="panel-03.png" /></p>
+<details>
+   <summary>Panel 3: Lambda is Born</summary>
+
+Panel 3: Lambda is Born
+Please generate a consistent graphic novel panel using a wide-landscape format. Church alone in his study late at night, illuminated by a desk lamp casting dramatic shadows. On the chalkboard before him, we see the first lambda expressions taking shape: λx.x, λf.λx.f(x), etc. The lambda symbol (λ) glows with a soft electric blue light, as if it's a breakthrough moment. The room is rendered in deep blues and teals with bright yellow highlights from the lamp. Coffee cups and crumpled papers litter the desk, showing the intensity of his work. Through the window, we can see the Princeton campus sleeping, emphasizing Church's solitary dedication. Mathematical symbols seem to dance around him, suggesting the birth of a new mathematical language.
+
+</details>
+
+<p>Working alone in his Princeton office during the long winter nights of 1932, Church made his breakthrough. The lambda symbol (λ) - borrowed from the Greek alphabet - became his notation for function abstraction. With just three simple concepts - variables, abstraction, and application - Church realized he could express any computable function. The elegance was breathtaking: <code>λx.x</code> represented the identity function, <code>λf.λx.f(x)</code> showed how functions could take other functions as arguments. This wasn't just another mathematical notation; it was a complete computational system built from pure abstraction. Church had unknowingly created the theoretical foundation for all of modern functional programming.</p>
+<h2 id="panel-4-the-presentation-challenge">Panel 4: The Presentation Challenge</h2>
+<p><img alt="" src="panel-04.png" /></p>
+<details>
+   <summary>Panel 4: Blank Stares and Confusion</summary>
+
+Panel 4: Blank Stares and Confusion
+Please generate a consistent graphic novel panel using a wide-landscape format. A wide panel showing Church presenting his lambda calculus to a lecture hall full of mathematicians and logicians. Church stands at the front with confidence, pointing to lambda expressions on the blackboard, but the audience looks completely bewildered. Thought bubbles show their confusion - question marks, tangled symbols, and frustrated expressions. The color scheme uses contrasting bright greens and reds to show the disconnect between Church's clarity and the audience's confusion. Some audience members are scratching their heads, others are whispering to neighbors, and a few are even dozing off. The lambda expressions on the board seem alien and incomprehensible to everyone except Church.
+
+</details>
+
+<p>Church's first presentations of lambda calculus were met with puzzled silence and polite but skeptical questions. To his colleagues, these strange lambda expressions seemed like abstract nonsense with no clear connection to the real problems of mathematics. "What practical use could this possibly have?" they wondered. Church tried to explain how lambda calculus could represent all computable functions, but without computers to demonstrate its power, the audience couldn't see beyond the unfamiliar notation. Even Church himself couldn't fully predict how revolutionary his simple system would become. The mathematical community was simply not ready for such a radical departure from traditional approaches.</p>
+<h2 id="panel-5-the-simplification-strategy">Panel 5: The Simplification Strategy</h2>
+<p><img alt="" src="panel-05.png" /></p>
+<details>
+   <summary>Panel 5: Back to Basics</summary>
+
+Panel 5: Back to Basics
+Please generate a consistent graphic novel panel using a wide-landscape format.
+Church in his office, now with a different approach. Instead of complex formulas, he's drawing simple diagrams and basic examples on the board. The scene shows him breaking down lambda calculus into its three fundamental components: variables (shown as colorful boxes), abstraction (shown as function machines), and application (shown as arrows connecting inputs to outputs). The palette uses bright, friendly colors - yellows, light blues, and greens - to represent this more approachable method. His desk now has children's building blocks and simple mechanical toys, suggesting he's thinking about fundamental, intuitive concepts rather than abstract mathematics.
+
+</details>
+
+<p>Realizing that his abstract presentation wasn't connecting with audiences, Church began to rethink his approach. He started using simple, concrete examples and visual metaphors. Instead of diving into complex mathematical proofs, he showed how lambda expressions worked like simple machines: put an input in, get an output out. He demonstrated how <code>λx.x+1</code> was just a machine that added one to whatever you fed it. This pedagogical shift was crucial - Church learned that even the most profound mathematical ideas need to be communicated in terms that people can understand and relate to. This lesson would prove invaluable as lambda calculus eventually found its way into computer science education decades later.</p>
+<h2 id="panel-6-the-turing-connection">Panel 6: The Turing Connection</h2>
+<p><img alt="" src="panel-06.png" /></p>
+<details>
+   <summary>Panel 6: Two Minds, One Truth</summary>
+
+Panel 6: Two Minds, One Truth
+Please generate a consistent graphic novel panel using a wide-landscape format.
+A split panel showing Church on the left and Alan Turing on the right, separated by the Atlantic Ocean (shown as a stylized blue wave in the center). Both are working on computation - Church with lambda expressions, Turing with his machine concepts. Ghostly connections flow between them, suggesting their parallel discoveries. The color scheme uses complementary blues and oranges to show their different but connected approaches. Mathematical symbols and mechanical gears float between them, representing the convergence of their ideas. In the background, we can see Princeton on one side and Cambridge on the other, emphasizing the international nature of this mathematical breakthrough.
+
+</details>
+
+<p>Across the Atlantic, a brilliant young mathematician named Alan Turing was working on his own approach to understanding computation. Turing's "machines" - abstract devices that could read, write, and move along a tape - seemed completely different from Church's lambda expressions. Yet when Turing visited Princeton in 1936-1938 to work on his PhD under Church's supervision, something remarkable emerged. Despite their vastly different approaches, both systems could compute exactly the same set of functions. Church's abstract functional approach and Turing's mechanical model were mathematically equivalent. This discovery, now known as the Church-Turing Thesis, established the fundamental limits of computation itself.</p>
+<h2 id="panel-7-the-breakthrough-moment">Panel 7: The Breakthrough Moment</h2>
+<p><img alt="" src="panel-07.png" /></p>
+<details>
+   <summary>Panel 7: Equivalence Revealed</summary>
+
+Panel 7: Equivalence Revealed
+Please generate a consistent graphic novel panel using a wide-landscape format.
+A dramatic wide panel showing the moment Church realizes that lambda calculus and Turing machines are equivalent in computational power. The scene shows Church at his desk with papers spread out, making connections between lambda expressions and Turing machine states. Bright lines of realization connect different concepts, rendered in electric blues and bright whites. The Church-Turing thesis materializes as a glowing equation floating above his head. The background shows both lambda symbols and mechanical gears working in harmony, representing the unification of abstract mathematics and mechanical computation. Church's expression shows the joy of mathematical discovery.
+
+</details>
+
+<p>The moment Church realized that his lambda calculus and Turing's machines described the same fundamental concept was one of the most profound discoveries in the history of mathematics and computer science. This wasn't just an academic curiosity - it meant that computation itself had precise mathematical limits. Any problem that could be solved algorithmically could be expressed in either system. The Church-Turing Thesis became the foundation for theoretical computer science, establishing that there are some problems that no computer, no matter how powerful, could ever solve. Church had not only created a programming language before computers existed; he had helped define the theoretical limits of all possible computers.</p>
+<h2 id="panel-8-early-adoption-struggles">Panel 8: Early Adoption Struggles</h2>
+<p><img alt="" src="panel-08.png" /></p>
+<details>
+   <summary>Panel 8: The Practical Problem</summary>
+Panel 8: The Practical Problem
+Please generate a consistent graphic novel panel using a wide-landscape format.
+
+Church presenting lambda calculus to early computer pioneers and engineers in the 1940s-50s. The scene shows him in front of room-sized computers (ENIAC-style) trying to explain how lambda calculus could be relevant to practical computing. The engineers and programmers look skeptical, surrounded by punch cards, vacuum tubes, and mechanical switches. The color palette contrasts Church's bright, theoretical world (blues and purples) with the brown, mechanical world of early computing. Thought bubbles show the engineers thinking about practical concerns - memory limitations, processing speed, and hardware constraints - while Church's ideas seem too abstract for immediate application.
+
+</details>
+
+<p>When the first electronic computers emerged in the 1940s and 1950s, Church found himself facing a new challenge. The engineers and programmers working with room-sized machines like ENIAC were focused on immediate practical problems: making vacuum tubes work reliably, managing severely limited memory, and optimizing every instruction for maximum efficiency. Lambda calculus, with its emphasis on function abstraction and symbolic manipulation, seemed hopelessly impractical for machines that struggled to add two numbers quickly. The gap between Church's elegant theoretical framework and the harsh realities of early computing technology seemed insurmountable. Many dismissed his ideas as mathematical curiosities with no practical relevance.</p>
+<h2 id="panel-9-the-programming-language-revolution">Panel 9: The Programming Language Revolution</h2>
+<p><img alt="" src="panel-09.png" /></p>
+<details>
+   <summary>Panel 9: LISP and the First Implementations</summary>
+Panel 9: The Programming Language Revolution
+
+Please generate a consistent graphic novel panel using a wide-landscape format.
+
+A vibrant panel showing John McCarthy and others implementing lambda calculus concepts in early programming languages like LISP. The scene shows computer scientists at MIT working with early computers, with lambda expressions being translated into actual code. The color scheme is bright and optimistic - greens, blues, and yellows - showing the excitement of making Church's abstract ideas practical. Code snippets flow like ribbons across the panel, connecting mathematical theory to programming practice. In the background, we see the evolution from Church's handwritten lambda expressions to printed computer code, representing the bridge between pure mathematics and applied computer science.
+
+</details>
+
+<p>Everything changed in 1958 when John McCarthy at MIT created LISP, the first programming language to directly implement Church's lambda calculus concepts. Suddenly, Church's abstract ideas about function abstraction became concrete programming tools. LISP programmers could define anonymous functions, pass functions as arguments, and manipulate code as data - all core concepts from lambda calculus. The artificial intelligence community, eager for more flexible programming tools than the rigid assembly languages of the day, embraced LISP enthusiastically. Church's mathematical poetry was finally finding its practical voice. For the first time, programmers could write code that looked remarkably similar to Church's original lambda expressions from the 1930s.</p>
+<h2 id="panel-10-modern-programming-renaissance">Panel 10: Modern Programming Renaissance</h2>
+<p><img alt="" src="panel-10.png" /></p>
+<details>
+   <summary>Panel 10: Functional Programming's Rise</summary>
+
+Panel 10: Functional Programming's Rise
+
+Please generate a consistent graphic novel panel using a wide-landscape format.
+
+A contemporary scene showing modern programmers working with functional programming languages (Haskell, JavaScript, Python) on laptops and modern computers. Lambda functions are visualized as flowing, organic shapes connecting different parts of code. The panel uses bright, modern tech colors - electric blues, neon greens, and cyber purples. Multiple screens show lambda expressions in different programming contexts - web development, data science, artificial intelligence. The programmers look engaged and productive, showing how Church's ideas have finally found their practical home. Code flows like energy streams between the computers, representing the interconnected nature of modern functional programming.
+
+</details>
+
+<p>By the 21st century, Church's lambda calculus had become ubiquitous in programming, though often hidden in familiar syntax. JavaScript developers use arrow functions (<code>x =&gt; x + 1</code>) without realizing they're writing lambda expressions. Python's lambda keyword directly honors Church's notation. Even traditionally imperative languages like Java and C++ have adopted functional programming features. The rise of big data processing, where functions are distributed across thousands of computers, made functional programming's emphasis on immutability and side-effect-free computation not just elegant, but essential for correctness. Cloud computing platforms like AWS even named their serverless computing service "Lambda" in honor of Church's contribution to computer science.</p>
+<h2 id="panel-11-lambdas-hidden-influence">Panel 11: Lambda's Hidden Influence</h2>
+<p><img alt="" src="panel-11.png" /></p>
+<details>
+   <summary>Panel 11: Everywhere You Look</summary>
+
+Panel 11: Everywhere You Look
+Please generate a consistent graphic novel panel using a wide-landscape format.
+
+A wide, bustling panel showing lambda calculus concepts embedded throughout modern technology. The scene shows a smart city with various applications highlighted: smartphones running apps with functional code, web servers processing lambda functions in the cloud, AI systems using lambda calculus for neural networks, and autonomous vehicles using functional programming for safety-critical systems. Each application is connected by flowing lambda symbols rendered in bright, electric colors. The palette uses a full spectrum of bright, tech-forward colors to show the diversity of applications. Hidden lambda symbols appear in unexpected places - traffic light algorithms, social media feeds, and financial trading systems.
+
+</details>
+
+<p>Today, Church's lambda calculus influences technology in ways that would have seemed like science fiction in 1932. Every time you use a smartphone app, lambda functions are processing your touch events. When you stream a video, functional programming concepts help distribute the workload across servers worldwide. Machine learning algorithms use lambda calculus principles to optimize neural networks. Even cryptocurrency blockchain systems rely on functional programming concepts for security and reliability. The autonomous vehicles being tested on our roads use functional programming languages for their safety-critical systems because the mathematical guarantees that Church discovered make certain types of errors impossible. Lambda calculus has become the invisible mathematical foundation supporting our digital civilization.</p>
+<h2 id="panel-12-the-eternal-lambda">Panel 12: The Eternal Lambda</h2>
+<p><img alt="" src="panel-12.png" /></p>
+<details>
+   <summary>Panel 12: Church's Legacy Lives On</summary>
+
+Panel 12: Church's Legacy Lives On
+Please generate a consistent graphic novel panel using a wide-landscape format.
+
+A majestic final panel showing an older, wiser Church in the present day (imagined if he were still alive), surrounded by the digital world his lambda calculus helped create. The scene shows him in a modern university setting, with holographic displays showing lambda expressions being used in quantum computing, advanced AI, and future technologies. The color palette is bright and ethereal - golds, electric blues, and radiant whites - suggesting timelessness and continuing influence. Students of various backgrounds work with lambda concepts on futuristic interfaces. In the sky above, lambda symbols form constellation patterns, suggesting that Church's mathematical poetry has become fundamental to the structure of our digital universe. The final image shows that what began as abstract mathematics has become the hidden language of modern civilization.
+
+</details>
+
+<p>Alonzo Church passed away in 1995, just as the internet was beginning to transform the world. He lived long enough to see his abstract mathematical ideas become practical tools used by millions of programmers, but he could never have imagined how thoroughly lambda calculus would permeate our digital lives. Today, as we stand on the brink of quantum computing and artificial general intelligence, Church's insights about the nature of computation remain as relevant as ever. The lambda symbol he chose in 1932 has become one of the most important symbols in computer science - a testament to the power of pure mathematical thought to shape the future. In learning lambda calculus and graph representations, we're not just studying historical curiosities; we're exploring the fundamental language in which our digital future is being written.</p>
+<details>
+   <summary>Cover Image</summary>
+   Cover Image:
+
+   Please generate a cover image using a wide-landscape format for this graphic novel about About Alonzo Church and the development of Lambda Calculus.  The title is: "Alonzo Church and the Legacy of Lambda Calculus"
+</details>
+
+<h2 id="narrative-arc-summary">Narrative Arc Summary</h2>
+<p>This graphic novel follows Alonzo Church's journey from a young mathematician grappling with foundational crises in mathematics to the creator of one of the most influential concepts in computer science. The story emphasizes:</p>
+<p><strong>Key Themes:</strong></p>
+<ul>
+<li><strong>The Challenge of Communication</strong>: Church's struggle to explain abstract mathematical concepts to practical-minded audiences</li>
+<li><strong>Theoretical Foundation</strong>: How pure mathematics eventually enables practical applications</li>
+<li><strong>Persistence and Vision</strong>: Church's dedication despite initial skepticism and misunderstanding</li>
+<li><strong>Unexpected Connections</strong>: The surprising links between mathematical theory and technological innovation</li>
+</ul>
+<p><strong>Modern Impact Examples Highlighted:</strong></p>
+<ul>
+<li><strong>Web Development</strong>: Lambda functions in JavaScript for event handling and functional programming</li>
+<li><strong>Cloud Computing</strong>: Serverless computing (AWS Lambda) for scalable applications</li>
+<li><strong>Artificial Intelligence</strong>: Functional programming paradigms in machine learning frameworks</li>
+<li><strong>Data Processing</strong>: MapReduce and functional approaches to big data analysis</li>
+<li><strong>Programming Languages</strong>: Modern languages like Haskell, Clojure, and F# built on lambda calculus principles</li>
+<li><strong>Type Systems</strong>: Advanced type systems in languages like TypeScript and Rust based on Church's type theory</li>
+</ul>
+<p>The graphic novel demonstrates how Church overcame communication challenges by:</p>
+<ol>
+<li><strong>Simplifying Examples</strong>: Moving from abstract proofs to concrete, visual representations</li>
+<li><strong>Finding Practical Applications</strong>: Connecting theory to emerging computer science needs</li>
+<li><strong>Building Community</strong>: Working with other mathematicians and computer scientists</li>
+<li><strong>Persistent Education</strong>: Continuing to teach and refine his explanations over decades</li>
+</ol>
+<p>This narrative structure provides students with both historical context and modern relevance, showing how foundational mathematical work eventually transforms technology and society.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Alonzo_Church">Alonzo Church - Wikipedia</a> - 2025 - Wikipedia - Comprehensive biographical article covering Church's life, major contributions including lambda calculus, and his role as one of the founders of computer science</li>
+<li><a href="https://learnxinyminutes.com/lambda-calculus/">Learn Lambda Calculus in Y Minutes</a> - 2024 - Learn X in Y Minutes - Interactive tutorial perfect for beginners showing how lambda calculus works with concrete examples and clear explanations of syntax</li>
+<li><a href="https://plato.stanford.edu/entries/church/">Alonzo Church - Stanford Encyclopedia of Philosophy</a> - 2021 - Stanford Encyclopedia of Philosophy - Scholarly but accessible overview of Church's philosophical and mathematical contributions, including detailed sections on lambda calculus and computability</li>
+<li><a href="https://history-computer.com/people/alonzo-church-complete-biography/">Alonzo Church - Complete Biography, History, and Inventions</a> - April 16, 2024 - History-Computer - Student-friendly biography focusing on Church's inventions and their modern relevance to computer science</li>
+<li><a href="https://www.britannica.com/biography/Alonzo-Church">Alonzo Church - Britannica</a> - February 19, 2009 - Encyclopædia Britannica - Concise biographical entry highlighting Church's key contributions to mathematical logic and theoretical computer science foundations</li>
+<li><a href="https://lucasfcosta.com/2018/07/29/An-Introduction-to-Lambda-Calculus-Part-1.html">A Gentle Introduction to Lambda Calculus - Part 1: Syntax</a> - July 29, 2018 - Lucas F. Costa's Blog - Beginner-friendly tutorial explaining lambda calculus concepts with JavaScript examples, perfect for students familiar with programming</li>
+<li><a href="https://medium.com/@axdemelas/lambda-calculus-with-javascript-897f7e81f259">Lambda Calculus with JavaScript</a> - October 9, 2023 - Medium - Shows practical connections between Church's theoretical work and modern programming languages, demonstrating relevance to today's technology</li>
+<li><a href="https://medium.com/@hakanapohan/lambda-calculus-the-bedrock-of-functional-programming-1435b874690f">Lambda Calculus: The Bedrock of Functional Programming</a> - November 24, 2024 - Medium - Explains how Church's lambda calculus became the foundation for modern functional programming languages like Haskell, JavaScript, and Python</li>
+<li><a href="https://onepercentrule.substack.com/p/alonzo-church-the-forgotten-architect">Alonzo Church: The Forgotten Architect of Computer Intelligence</a> - November 4, 2024 - The One Percent Rule - Engaging narrative about Church's life and why his contributions, though less famous than Turing's, were equally fundamental to computer science</li>
+<li><a href="https://www.lenovo.com/us/en/glossary/lambda-calculus/">Exploring Lambda Calculus in Functional Programming</a> - 2024 - Lenovo US - Practical guide showing how lambda calculus influences modern programming, with examples of how students encounter Church's ideas in languages like JavaScript and Python</li>
+</ol>
+<p>These references provide a comprehensive introduction to both Alonzo Church's life story and the lasting impact of lambda calculus, ranging from accessible biographical sketches to hands-on tutorials that demonstrate the continuing relevance of his work in modern computing.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Graphic Novels About Lambda Calculus">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Graphic Novels About Lambda Calculus
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../glossary/" class="md-footer__link md-footer__link--next" aria-label="Next: Glossary">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Glossary
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.footer", "navigation.sections - toc.follow", "navigation.top", "search.highlight", "search.share", "header.autohide"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -19,6 +19,8 @@ nav:
   - Stories:
     - stories/index.md
     - stories/alanzo-church/index.md
+  - Prompts:
+    - Intro: prompts/index.md
   - Glossary: glossary.md
   - How We Built This Site: how-we-built-this-site.md
   - References: references.md
@@ -45,10 +47,11 @@ theme:
     - navigation.path
     - navigation.prune
     - navigation.indexes
-       # this adds the prev and next icons in the footer
+    # this adds the prev and next icons in the footer
     - navigation.footer
-    - navigation.sections - toc.follow
+    - navigation.sections 
     - navigation.top
+    - toc.follow
     - search.highlight
     - search.share
     - header.autohide
