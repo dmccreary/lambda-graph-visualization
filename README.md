@@ -4,6 +4,8 @@
 
 [![License: CC BY-SA-NC](https://img.shields.io/badge/License-CC%20BY--SA--NC-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![GitHub Pages](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://dmccreary.github.io/lambda-graph-visualization/)
+[![Made with MkDocs](https://img.shields.io/badge/Made%20with-MkDocs-1976d2)](https://www.mkdocs.org/)
+[![Material for MkDocs](https://img.shields.io/badge/Material%20for-MkDocs-526cfe)](https://squidfunk.github.io/mkdocs-material/)
 
 **Visualizing Functional Computation with Interactive Graph Data Structures**
 
