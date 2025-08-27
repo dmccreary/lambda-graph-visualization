@@ -1,3 +1,12 @@
+---
+title: Alonzo Church and the Legacy of Lambda Calculus
+description: A graphic novel about how Alonzo Church developed Lambda Calculus and its massive impact on computer programming.
+image: /stories/alanzo-church/cover.png
+og:image: /stories/alanzo-churc/cover.png
+twitter:image: /stories/alanzo-churcw/cover.png
+social:
+   cards: false
+---
 # Alonzo Church and the Legacy of Lambda Calculus
 
 ![](cover.png)
