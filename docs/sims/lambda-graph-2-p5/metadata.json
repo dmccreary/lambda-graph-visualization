@@ -1,0 +1,43 @@
+{
+  "title": "P5.js Graph Animation of Lambda Process",
+  "description": "[Run on the p5.js editor](https://editor.p5js.org/dmccreary/sketches/o7uyZAVIF)",
+  "subject": "Mathematics",
+  "topic": "P5.js Graph Animation of Lambda Process",
+  "gradeLevel": "6-12",
+  "bloomsTaxonomy": [
+    "Understand",
+    "Apply"
+  ],
+  "author": "Dan McCreary",
+  "dateCreated": "2026-01-23",
+  "dateModified": "2026-01-23",
+  "version": "1.0.0",
+  "license": "MIT",
+  "language": "en",
+  "format": "text/html",
+  "type": "Interactive Simulation",
+  "framework": "p5.js",
+  "url": "https://dmccreary.github.io/lambda-graph-visualization/sims/lambda-graph-2-p5/",
+  "identifier": "https://dmccreary.github.io/lambda-graph-visualization/sims/lambda-graph-2-p5/",
+  "_source": {
+    "repo": "lambda-graph-visualization",
+    "sim": "lambda-graph-2-p5",
+    "github_url": "https://github.com/dmccreary/lambda-graph-visualization/tree/main/docs/sims/lambda-graph-2-p5",
+    "auto_generated": true,
+    "generation_date": "2026-01-23"
+  },
+  "subjects": [
+    "Mathematics",
+    "Computer Science"
+  ],
+  "visualizationType": [
+    "animation",
+    "graph",
+    "network"
+  ],
+  "learningObjectives": [
+    "Understand the mathematical concept of p5.js graph animation of lambda process",
+    "Apply p5.js graph animation of lambda process to solve problems",
+    "Visualize and interpret p5.js graph animation of lambda process relationships"
+  ]
+}
