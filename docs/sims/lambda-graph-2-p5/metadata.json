@@ -39,5 +39,23 @@
     "Understand the mathematical concept of p5.js graph animation of lambda process",
     "Apply p5.js graph animation of lambda process to solve problems",
     "Visualize and interpret p5.js graph animation of lambda process relationships"
-  ]
+  ],
+  "pedagogical": {
+    "pattern": "worked-example",
+    "bloomAlignment": [
+      "understand",
+      "apply"
+    ],
+    "bloomVerbs": [
+      "explain",
+      "implement"
+    ],
+    "pacing": "step-through",
+    "supportsPrediction": false,
+    "dataVisibility": "medium",
+    "feedbackType": [
+      "explanatory"
+    ],
+    "interactionStyle": "construct"
+  }
 }
